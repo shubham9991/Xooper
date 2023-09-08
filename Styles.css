@@ -1,0 +1,332 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 37px 132px 37px 132px;
+    background: #EFF1FE;
+}
+
+.co-name {
+    color: #0B1038;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.contact-button {
+    border-radius: 38px;
+    background: #222250;
+    backdrop-filter: blur(3px);
+    padding: 9px 23px 9px 24px;
+
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.brand-video-wrapper {
+    padding: 0px 60px 0px 60px;
+    z-index: 999;
+    background: #EFF1FE;
+}
+
+.brand-video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 85vh;
+    background-color: #222250;
+    border-radius: 24px;
+}
+
+.heading-wrapper {
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;    
+    font-style: normal;
+    font-weight: 600;
+}
+
+.sub-heading-wrapper {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+}
+
+.download-button-wrapper {
+    padding: 50px;
+}
+
+.apple-btn {
+    position: relative;
+    left: 30px;
+}
+
+
+/* FOLD1 */
+
+.section-one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background: #EFF1FE;
+    overflow: hidden;
+}
+
+.fold-o-top-txt {
+    z-index: -1;
+    position: relative;
+    bottom: 250px;
+    font-family: Poppins;
+    font-size: 25rem;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: 2px #5D5DA826;
+}
+
+.fold-o-right-content-wrapper {
+    position: relative;
+    top: 100px;
+    text-align: center;
+}
+
+.fold-o-heading {
+    color: #222250;
+    font-family: Poppins;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.fold-o-sub-heading {
+    color: #343462;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 181.5%;
+}
+
+.fold-o-img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* FOLD2 */
+
+.section-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background: #DCD6FF;
+}
+
+.fold-t-img {
+    position: absolute;
+    bottom: 0;
+}
+
+/* FOLD3 */
+
+.section-three {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #EFF1FE;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* .fold-three-left-content-wrapper {
+    position: relative;
+    top: 190px;
+    text-align: left;
+    padding-left: 132px;
+} */
+
+.fold-th-img {
+    /* position: relative;
+    bottom: 70px; */
+    /* float: right; */
+    /* padding-right: 67px; */
+    position: absolute;
+    bottom: 0;
+}
+
+/* MARQUEE */
+
+.marquee-container {
+    width: 100%;
+    background: #EFF1FE;;
+    overflow: hidden;
+}
+
+.marquee {
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+}
+
+.marquee span {
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* FOLD4 */
+
+.section-four {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background: #6552C4;
+    text-align: center;
+    overflow: hidden;
+}
+
+.fold-f-img {
+    position: absolute;
+    bottom: 0;
+    width: 50vw;
+    /* display: flex;
+    align-items: center; */
+}
+
+.fold-f-heading {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 181.5%;
+    /* text-align: center; */
+    padding-top: 125px;
+}
+
+.fold-f-sub-heading {
+    /* width: 699px; */
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 181.5%;
+    /* text-align: center; */
+}
+
+/* FOOTER */
+
+.brand-footer {
+    position: relative;
+    height: 100vh;
+    background: #1A1A1A;
+    overflow: hidden;
+}
+
+.footer-up-wrapper {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 100px;
+}
+
+.footer-heading {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 300%;
+}
+
+.footer-sub-heading {
+    width: 337px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 181.5%;
+}
+
+.footer-down-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* position: relative; */
+    /* top: 30px; */
+    /* width: 799px;
+    height: 501.801px; */
+    margin-top: 100px;
+    overflow: hidden;
+    /* opacity: 0.3; */
+
+}
+
+.company-footer-name {
+    /* position: relative;
+    top: 100px; */
+    margin-top: 91px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 2.1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 181.5%;
+    /* text-align: center; */
+    text-transform: uppercase;
+}
+
+.footer-sub-head {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 181.5%;
+    /* text-align: center; */
+}
+
+.brand-img-footer {
+    position: absolute;
+    bottom: 0;
+    width: 600px;
+}
