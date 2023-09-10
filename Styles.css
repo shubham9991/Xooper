@@ -2,7 +2,71 @@
     padding: 0;
     margin: 0;
     border: 0;
+    cursor: none;
+    scroll-behavior: smooth;
 }
+
+
+/* ..................... */
+
+.custom-cursor {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transition: width 0.3s, height 0.3s;
+    backdrop-filter: blur(2px);
+    background-color: rgba(126, 63, 184, 0.022);
+    border: 1px solid #c4c4da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    /*-webkit-border-radius: 50%;
+    -webkit-backdrop-filter: blur(2px);
+     */:;
+    -webkit-transition: width 0.3s, height 0.3s;
+    -moz-transition: width 0.3s, height 0.3s;
+    -ms-transition: width 0.3s, height 0.3s;
+    -o-transition: width 0.3s, height 0.3s;
+}
+
+.btn {
+    cursor: none;
+}
+  
+/* .................... */
+
+
+
+/* scroll to top */
+  
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+  
+    width: 50px;
+    height: 50px;
+  
+    color: black;
+    background-color: #33dfd6;
+  
+    border: none;
+    border-radius: 50px;
+  
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+/* ........... */
 
 .navbar-wrapper {
     display: flex;
@@ -32,10 +96,9 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    cursor: pointer;
 }
 
-.brand-video-wrapper {
+/* .brand-video-wrapper {
     padding: 0px 60px 0px 60px;
     z-index: 999;
     background: #EFF1FE;
@@ -48,14 +111,13 @@
     align-items: center;
 
     min-height: 85vh;
-    background-color: #222250;
     border-radius: 24px;
 }
 
 .heading-wrapper {
     color: #FFF;
     font-family: 'Poppins', sans-serif;
-    font-size: 4rem;    
+    font-size: 1rem;
     font-style: normal;
     font-weight: 600;
 }
@@ -76,7 +138,79 @@
 .apple-btn {
     position: relative;
     left: 30px;
+} */
+
+
+.video {
+    opacity: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
+.brand-video-wrapper {
+    padding: 0px 60px 0px 60px;
+    z-index: 999;
+    background: #EFF1FE;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.brand-video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    border-radius: 24px;
+    position: relative;
+}
+
+
+.brand-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.heading-wrapper {
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    position: relative;
+    z-index: 1; 
+}
+
+.sub-heading-wrapper {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.download-button-wrapper {
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.apple-btn {
+    position: relative;
+    left: 30px;
+}
+
+
+
+
+
 
 
 /* FOLD1 */
@@ -86,46 +220,40 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    height: 100vh;
+    height: 800px;
     background: #EFF1FE;
     overflow: hidden;
 }
 
-.fold-o-top-txt {
-    z-index: -1;
-    position: relative;
-    bottom: 250px;
-    font-family: Poppins;
-    font-size: 25rem;
-    font-style: normal;
-    font-weight: 700;
-    text-align: center;
-    color: transparent;
-    -webkit-text-stroke: 2px #5D5DA826;
-}
-
 .fold-o-right-content-wrapper {
     position: relative;
-    top: 100px;
+    top: 80px;
     text-align: center;
 }
 
 .fold-o-heading {
     color: #222250;
     font-family: Poppins;
-    font-size: 4rem;
+    font-size: 3.2rem;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 150%;
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+    text-align: center;
 }
 
 .fold-o-sub-heading {
+    display: block;
     color: #343462;
     font-family: Poppins;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 181.5%;
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+    /* width: 60vw !important; */
 }
 
 .fold-o-img {
@@ -143,13 +271,14 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    height: 100vh;
+    height: 800px;
     background: #DCD6FF;
 }
 
 .fold-t-img {
     position: absolute;
     bottom: 0;
+    max-width: 100%;
 }
 
 /* FOLD3 */
@@ -160,7 +289,7 @@
     flex-direction: column;
     align-items: center;
     background: #EFF1FE;
-    height: 100vh;
+    height: 800px;
     overflow: hidden;
 }
 
@@ -178,6 +307,7 @@
     /* padding-right: 67px; */
     position: absolute;
     bottom: 0;
+    width: 100vw;
 }
 
 /* MARQUEE */
@@ -216,7 +346,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    height: 100vh;
+    height: 800px;
     background: #6552C4;
     text-align: center;
     overflow: hidden;
@@ -236,9 +366,11 @@
     font-size: 3rem;
     font-style: normal;
     font-weight: 600;
-    line-height: 181.5%;
+    line-height: 150%;
     /* text-align: center; */
-    padding-top: 125px;
+    /* padding-top: 100px; */
+    padding-left: 40px !important;
+    padding-right: 40px !important;
 }
 
 .fold-f-sub-heading {
@@ -250,13 +382,15 @@
     font-weight: 500;
     line-height: 181.5%;
     /* text-align: center; */
+    padding-left: 80px !important;
+    padding-right: 80px !important;
 }
 
 /* FOOTER */
 
 .brand-footer {
     position: relative;
-    height: 100vh;
+    height: 800px;
     background: #1A1A1A;
     overflow: hidden;
 }
@@ -329,4 +463,243 @@
     position: absolute;
     bottom: 0;
     width: 600px;
+}
+
+.navbar-wrappers {
+    display: none;
+}
+
+@media (max-width: 937px) {
+
+    .navbar-wrapper {
+        padding: 37px 24px 37px 24px;
+    }
+
+    .brand-video-wrapper {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .brand-video {
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+}
+
+    .heading-wrapper {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .fold-o-img {
+        content: url('Assets/mediaFold0.svg') !important;
+    }
+
+    .fold-t-img {
+        content: url('Assets/mediaFold1.svg') !important;
+    }
+
+    .fold-th-img {
+        content: url('Assets/mediaFoldV2.svg') !important;
+    }
+
+    .fold-f-img {
+        width: 80vw !important;
+    }
+
+    .fold-o-heading {
+        font-size: 2.9rem;
+    }
+
+    .fold-f-heading {
+        font-size: 2.9rem;
+    }
+
+    .fold-f-sub-heading {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 769px) {
+    .fold-o-heading, .fold-f-heading {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .footer-sub-heading {
+        width: 230px !important;
+    }
+}
+
+@media (max-width: 688px) {
+    .footer-up-wrapper {
+        display: flex;
+        flex-direction: column;
+        top: 50px;
+        left: 32px;
+    }
+
+    .tab-footer-wrapper {
+        position: relative;
+        top: 30px;
+    }
+
+    .footer-sub-heading {
+        padding-right: 0px !important;
+    }
+}
+
+@media (max-width: 688px) {
+    .fold-o-heading, .fold-f-heading {
+        font-size: 2.5rem;
+    }
+
+    .fold-o-sub-heading, .fold-f-sub-heading {
+        position: relative;
+        top: 28px;
+        font-size: 16px;
+        padding-left: 56px !important;
+        padding-right: 56px !important;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navbar-wrapper{
+        display: none;
+    }
+
+    .inside-mob-nav-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-wrappers {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 14px;
+        background-color: #000;
+    }
+
+    .xooper-logos {
+        width: 40px;
+    }
+
+    .co-names {
+        position: relative;
+        left: 16px;
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 600;
+    }
+
+    .contact-buttons {
+        padding: 10px 20px;
+        height: 36px;
+        border-radius: 38px;
+        background: #FFF;
+        flex-shrink: 0;
+        backdrop-filter: blur(3px);
+        color: #000;
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+
+    .fold-o-sub-heading, .fold-f-sub-heading {
+        position: relative;
+        top: 16px !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .fold-o-img {
+        content: url('Assets/MOBILE-FOLD0.svg') !important;
+    }
+
+    .fold-t-img {
+        content: url('Assets/MOBILE-FOLD2.svg') !important;
+        width: 100vw;
+    }
+
+    .fold-th-img {
+        content: url('Assets/MOBILE-FOLDT.svg') !important;
+    }
+
+    .fold-f-img {
+        width: 100vw !important;
+        content: url('Assets/MOBILE-FOLD4.svg') !important;
+    }
+
+    .brand-img-footer {
+        width: 100vw;
+    }
+}
+
+
+
+@media (max-width: 500px) {
+    .fold-o-heading, .fold-f-heading, .fold-o-sub-heading, .fold-f-sub-heading {
+        text-align: left;
+    }
+    .fold-o-heading, .fold-f-heading {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .android-btn {
+        width: 120px;
+    }
+
+    .apple-btn {
+        width: 120px;
+        height: 35.688px;
+        left: 16px;
+    }
+}
+
+@media (max-width: 449px) {
+    .fold-o-heading, .fold-f-heading {
+        font-size: 2.2rem;
+        font-weight: 600;
+    }
+
+    .fold-o-sub-heading, .fold-f-sub-heading {
+        font-size: 14px !important;
+    }
+    
+    .section-one, .section-two, .section-three, .section-four {
+        /* height: 760px; */
+        height: 100vh;
+    }
+
+    .footer-sub-heading {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .section-one, .section-two, .section-three, .section-four {
+        /* height: 700px; */
+        height: 100vh;
+    }
+
+    .fold-o-heading, .fold-f-heading {
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width: 361px) {
+    .fold-o-heading, .fold-f-heading {
+        font-size: 1.9rem;
+    }
 }
