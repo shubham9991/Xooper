@@ -4,36 +4,49 @@
     border: 0;
     cursor: none;
     scroll-behavior: smooth;
+    box-sizing: border-box;
+    &::before, &::after {
+      box-sizing: border-box;
+    }
 }
 
 
 /* ..................... */
 
-.custom-cursor {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    transition: width 0.3s, height 0.3s;
-    backdrop-filter: blur(2px);
-    background-color: rgba(126, 63, 184, 0.022);
-    border: 1px solid #c4c4da;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    /*-webkit-border-radius: 50%;
-    -webkit-backdrop-filter: blur(2px);
-     */:;
-    -webkit-transition: width 0.3s, height 0.3s;
-    -moz-transition: width 0.3s, height 0.3s;
-    -ms-transition: width 0.3s, height 0.3s;
-    -o-transition: width 0.3s, height 0.3s;
+
+
+@media screen and (min-width: 531px) {
+    .custom-cursor {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        transition: width 0.3s, height 0.3s;
+        backdrop-filter: blur(2px);
+        background-color: rgba(126, 63, 184, 0.022);
+        border: 3px solid #c4c4da;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+         /* -webkit-border-radius: 50%;
+        -webkit-backdrop-filter: blur(2px); */
+        -webkit-transition: width 0.3s, height 0.3s;
+        -moz-transition: width 0.3s, height 0.3s;
+        -ms-transition: width 0.3s, height 0.3s;
+        -o-transition: width 0.3s, height 0.3s;
+    }
+    
+    .btn {
+        cursor: none;
+    }
 }
 
-.btn {
-    cursor: none;
+@media screen and (max-width: 530px) {
+    .custom-cursor {
+        display: none;
+    }
 }
   
 /* .................... */
@@ -54,9 +67,8 @@
     width: 50px;
     height: 50px;
   
-    color: black;
-    background-color: #33dfd6;
-  
+    color: #FFF;
+    background-color: #232020;
     border: none;
     border-radius: 50px;
   
@@ -66,18 +78,37 @@
     transition: opacity 0.3s ease-in-out;
   }
 
+  @media screen and (max-width: 530px) {
+    .scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .accordion-title {
+        font-size: 1rem;
+    }
+  }
+
+
+  @media screen and (max-width: 460px) {
+    /* .accordion-title {
+        font-size: 0.8rem;
+    } */
+  }
+
+
 /* ........... */
 
 .navbar-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 37px 132px 37px 132px;
-    background: #EFF1FE;
+    padding: 27px 132px 27px 132px;
+    background: #000;
 }
 
 .co-name {
-    color: #0B1038;
+    color: #fff;
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
     font-style: normal;
@@ -142,12 +173,12 @@
 
 
 .video {
-    opacity: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* opacity: 50%; */
+    /* background-color: rgba(0, 0, 0, 0.5); */
 }
 
 .brand-video-wrapper {
-    padding: 0px 60px 0px 60px;
+    /* padding: 0px 60px 0px 60px; */
     z-index: 999;
     background: #EFF1FE;
     position: relative;
@@ -386,6 +417,136 @@
     padding-right: 80px !important;
 }
 
+/* Fold 5 */
+
+.section-five {
+    display: flex;
+    min-height: 705px;
+    font-family: poppins;
+    cursor: pointer !important;
+}
+
+.section-five:hover {
+    /* cursor: url('Assets/QuestionMark.svg'), auto !important; */
+    cursor: pointer;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.container h2 {
+    font-size: 2rem;
+}
+
+.accordion {
+    /* position: relative;
+    top: 50px; */
+}
+
+.accordion-item {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion-item button[aria-expanded='true'] {
+    border-bottom: 1px solid rgba(150, 17, 198, 0.21);
+}
+
+
+
+.accordion-item button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    /* color: #7288a2; */
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.accordion-item button:hover,
+.accordion-item button:focus {
+    /* color: #03b5d2; */
+}
+
+.accordion-item button .accordion-title {
+    padding: 1em 1.5em 1em 0;
+}
+
+.accordion-item button .icon {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    padding-left: 15px;
+    /* border: 1px solid;
+    border-radius: 22px; */
+}
+
+.accordion-item button .icon::before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 9px;
+    left: 5px;
+    width: 10px;
+    height: 2px;
+    background: #22225057;
+}
+
+.accordion-item button .icon::after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 5px;
+    left: 9px;
+    width: 2px;
+    height: 10px;
+    background: #22225057;
+}
+
+.accordion-item button[aria-expanded='true'] {
+    /* color: #03b5d2; */
+    font-weight: 700 !important; 
+}
+
+.accordion-item button[aria-expanded='true'] .icon::after {
+    width: 0;
+}
+
+.accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+}
+
+.accordion-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 2em 0;
+}
+
+.accordion-item button[aria-expanded='true'] + .accordion-content {
+    opacity: 1;
+    max-height: 9em;
+    transition: all 200ms linear;
+    will-change: opacity, max-height;
+}
+
+
+
 /* FOOTER */
 
 .brand-footer {
@@ -438,7 +599,7 @@
 .company-footer-name {
     /* position: relative;
     top: 100px; */
-    margin-top: 91px;
+    margin-top: 80px;
     color: #FFF;
     font-family: Poppins;
     font-size: 2.1rem;
@@ -467,6 +628,86 @@
 
 .navbar-wrappers {
     display: none;
+}
+
+.newsletter-wrapper {
+    position: relative;
+    top: 50px;
+}
+
+.news-input {
+    margin-top: 10px;
+    display: flex;
+    gap: 0;
+}
+
+.news-head-wrapper {
+    display: flex;
+}
+
+.main-head-footer {
+color: #FFF;
+font-family: poppins;
+font-size: 1.3rem;
+font-style: normal;
+font-weight: 500;
+line-height: 181.5%;
+/* margin-left: 10px; */
+}
+
+.input-wrapper {
+    width: 230px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 11px 0px 0px 11px;
+    background: #D9D9D9;
+    -webkit-border-radius: 11px 0px 0px 11px;
+    -moz-border-radius: 11px 0px 0px 11px;
+    -ms-border-radius: 11px 0px 0px 11px;
+    -o-border-radius: 11px 0px 0px 11px;
+}
+
+/* .input-wrapper {
+    padding-left: 10px;
+} */
+
+/* Add padding to placeholder text */
+/* .input-wrapper::placeholder {
+    padding-left: 10px;
+} */
+
+/* Maintain padding when input is focused */
+/* .input-wrapper:focus::placeholder {
+    padding-left: 10px;
+} */
+
+.input-wrapper:hover {
+    border-style: none !important;
+}
+
+
+
+
+.news-btn-wrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #6D81E2;
+    border-radius: 0px 11px 11px 0px;
+    -webkit-border-radius: 0px 11px 11px 0px;
+    -moz-border-radius: 0px 11px 11px 0px;
+    -ms-border-radius: 0px 11px 11px 0px;
+    -o-border-radius: 0px 11px 11px 0px;
+
+    color: #FFF;
+    font-family: poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    /* line-height: 181.5%; */
+    text-align: center;
 }
 
 @media (max-width: 937px) {
@@ -542,7 +783,7 @@
 
     .tab-footer-wrapper {
         position: relative;
-        top: 30px;
+        top: 90px;
     }
 
     .footer-sub-heading {
@@ -653,17 +894,57 @@
     .fold-o-heading, .fold-f-heading {
         font-size: 1.8rem;
     }
-}
 
-@media (max-width: 425px) {
-    .android-btn {
-        width: 120px;
+    .faq-head {
+        font-size: 6vw !important;
     }
 
-    .apple-btn {
-        width: 120px;
-        height: 35.688px;
+    .accordion-content p {
+        font-size: 0.8rem !important;
+    }
+
+    .container {
+        padding: 2rem;
+    }
+
+    .input-wrapper {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 468px) {
+    .faq-head {
+        font-size: 2.3rem !important;
+    }
+}
+
+@media (max-width: 396px) {
+    .faq-head {
+        font-size: 2rem !important;
+    }
+}
+
+/* @media (max-width: 388px) {
+    .foot-android-btn {
+        width: 110px !important;
+    }
+
+    .foot-apple-btn {
+        width: 110px !important;
         left: 16px;
+    }
+} */
+
+@media (max-width: 353px) {
+    .faq-head {
+        font-size: 1.7rem !important;
+    }
+}
+
+@media (max-width: 530px) {
+    .lass {
+        width: 100px;
+        height: 30px;
     }
 }
 
