@@ -1,34 +1,33 @@
 const cursor = document.querySelector('.custom-cursor');
-        const cursorWidth = cursor.offsetWidth;
-        const cursorHeight = cursor.offsetHeight;
-        const buttons = document.querySelectorAll('.btn');
-        
-        document.addEventListener('mousemove', (e) => {
-            const mouseX = e.clientX;
-            const mouseY = e.clientY;
+const cursorWidth = cursor.offsetWidth;
+const cursorHeight = cursor.offsetHeight;
+const buttons = document.querySelectorAll('.btn');
+const body = document.body;
 
-            // Calculate the position to center the cursor
-            const cursorX = mouseX - cursorWidth / 2;
-            const cursorY = mouseY - cursorHeight / 2;
+document.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
 
-            // Set the cursor position
-            cursor.style.left = cursorX + 'px';
-            cursor.style.top = cursorY + 'px';
-        });
+    // Calculate the position to center the cursor
+    const cursorX = mouseX - cursorWidth / 2;
+    const cursorY = mouseY - cursorHeight / 2;
 
-        buttons.forEach((button) => {
-            button.addEventListener('mouseenter', () => {
-                cursor.style.width = '50px';
-                cursor.style.height = '50px';
-            });
+    // Set the cursor position
+    cursor.style.left = cursorX + 'px';
+    cursor.style.top = cursorY + 'px';
+});
 
-            button.addEventListener('mouseleave', () => {
-                cursor.style.width = '35px';
-                cursor.style.height = '35px';
-            });
-        });
+buttons.forEach((button) => {
+    button.addEventListener('mouseenter', () => {
+        cursor.style.width = '60px';
+        cursor.style.height = '60px';
+    });
 
-
+    button.addEventListener('mouseleave', () => {
+        cursor.style.width = '35px';
+        cursor.style.height = '35px';
+    });
+});
         // SROLL TO TOP
 
         const scrollButton = document.querySelector(".scroll-to-top");
@@ -86,3 +85,6 @@ const cursor = document.querySelector('.custom-cursor');
         }
 
         items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+
+        // SCROLLER

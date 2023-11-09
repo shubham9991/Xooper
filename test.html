@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+
+.section-wrapper {
+    position: relative;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    background: #EFF1FE;
+    height: 1400px;
+    /* width: 100%; */
+    /* z-index: -11; */
+}
+
+.log {
+    position: absolute;
+    overflow-x: hidden;
+    user-select: none;
+    left: -500px;
+    height: 1399px;
+}
+
+.reflection {
+    position: absolute;
+    /* right: 0; */
+    left: 452px;
+    height: 1399px;
+    /* transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1); */
+    user-select: none;
+    overflow-x: hidden;
+}
+
+
+.mid-section-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 250px;
+}
+
+
+.sec-one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.twoo {
+    position: relative;
+    top: 122px;
+}
+
+.head {
+    color: #5D5DA8;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 65px;
+    padding: 0 60px;
+    text-align: center;
+}
+
+
+.sub-head {
+    padding: 0 60px;
+    color: #343462;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 181.5%;
+    text-align: center;
+}
+
+
+.form-wrapper {
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    */
+    /* position: relative;
+    top: 43px; */
+    background: #FFF;
+    width: 600px;
+    height: 660px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+    padding: 40px;
+    z-index: 99;
+}
+
+.form-aligner {
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    gap: 19px;
+}
+
+
+.form-label {
+    /* color: #FFF; */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.form-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #D6D6D6;
+    border-radius: 9px;
+    /*background: #6552C4;
+    */
+    width: 100%;
+    height: 54px;
+    padding-left: 25px;
+    /*color: #FFF;
+    */font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: capitalize;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+}
+
+.form-input::placeholder {
+    /* color: #FFF; */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.form-input,
+input[type="tel"] {
+    border: 1.5px solid #D6D6D6;
+    border-radius: 8px;
+    /* background: #6552C4; */
+    width: 100%;
+    height: 54px;
+    padding: 0 25px; /* Adjust padding as needed */
+    /* color: #FFF; */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.form-input::placeholder,
+input[type="tel"]::placeholder {
+    /* color: #FFF;  */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+
+
+.sub-btn {
+    display: inline-flex;
+    padding: 10px 52px;
+    justify-content: center;
+    align-items: center;
+    gap: 57px;
+    border-radius: 12px;
+    border: 1px solid #FFF;
+    background: #6552C4;
+    /* width: 170px; */
+
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+}
+
+@media (max-width: 937px) {
+
+.navbar-wrapper {
+    padding: 37px 24px 37px 24px;
+}
+
+.sub-head {
+    padding-top: 14px;
+}
+
+}
+
+@media (max-width: 769px) {
+
+.footer-sub-heading {
+    width: 230px !important;
+}
+}
+
+@media (max-width: 688px) {
+.footer-up-wrapper {
+    display: flex;
+    flex-direction: column;
+    top: 50px;
+    left: 32px;
+}
+
+.tab-footer-wrapper {
+    position: relative;
+    top: 90px;
+}
+
+.footer-sub-heading {
+    padding-right: 0px !important;
+}
+
+.form-wrapper {
+    width: 80%;
+    /* border: 0 60px; */
+}
+}
+
+
+@media (max-width: 600px) {
+
+.navbar-wrapper{
+    display: none;
+}
+
+.inside-mob-nav-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-wrappers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 14px;
+    background-color: #000;
+}
+
+.xooper-logos {
+    width: 40px;
+}
+
+.co-names {
+    position: relative;
+    left: 16px;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.contact-buttons {
+    padding: 10px 20px;
+    height: 36px;
+    border-radius: 38px;
+    background: #FFF;
+    flex-shrink: 0;
+    backdrop-filter: blur(3px);
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.head {
+    font-size: 3rem;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.sub-head {
+ font-size: 1.1rem;
+ padding-left: 30px;
+ padding-right: 30px;
+}
+
+.sub-btn {
+    font-size: 1.2rem;
+}
+}
+
+@media (max-width: 449px) {
+.footer-sub-heading {
+    font-size: 0.8rem;
+}
+
+.form-wrapper {
+    padding: 20px;
+    width: 85%;
+}
+
+.form-label, .form-input::placeholder {
+    font-size: 1rem;
+}
+
+.form-aligner {
+    gap: 11px;
+}
+
+.form-input, .form-input,
+input[type="tel"] {
+    padding-left: 13px;
+}
+}
+
+@media (max-width: 425px) {
+.bn45 {
+    height: 40px;
+    width: 140px;
+}
+
+.bn46 {
+    height: 40px;
+    width: 120px;
+}
+}
+
+@media (max-width: 351px) {
+.head {
+    font-size: 2.5rem;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 50px;
+}
+
+.sub-head {
+ font-size: 1rem;
+ padding-left: 30px;
+ padding-right: 30px;
+}
+}
+
+
+
+    </style>
+</head>
+<body>
+        <div class="section-wrapper">
+
+        <img class="log" src="assets\Contact\left.svg" alt="">
+        <img class="log reflection" src="assets\Contact\right.svg" alt="">
+
+
+        <div class="mid-section-wrapper">
+            <section class="sec-one twoo">
+                <span class="head">Connect with us have fun!</span>
+                <span class="sub-head">Join our community for exclusive discounts, connections, and collective savings Unleash Unbeatable Savings Today!</span>
+            </section>
+    
+            <section class="sec-one">
+                <div class="form-wrapper">
+                    <form action="" class="form-aligner">
+                        <label for="" class="form-label">Your name?</label>
+                        <input type="text" class="form-input" placeholder="Type your name here">
+                        <label for="" class="form-label">Your Email Address?</label>
+                        <input type="email" class="form-input" placeholder="Type your Email">
+                        <label for="tel" class="form-label">Your Phone Number?</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Type your Phone number" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                        <label for="" class="form-label">Your Business Website</label>
+                        <input type="text" class="form-input" placeholder="Type your Website here">
+                        <button class="sub-btn">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            
+
+            <!-- <svg class="anim-wave" width="100%" height="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" overflow="auto" shape-rendering="auto" fill="#ffffff">
+                <defs>
+                 <path id="wavepath" d="M 0 2000 0 500 Q 88 348 176 500 t 176 0 176 0 176 0 176 0 176 0 176 0 176 0  v1000 z" />
+                 <path id="motionpath" d="M -352 0 0 0" /> 
+                </defs>
+                <g >
+                 <use xlink:href="#wavepath" y="-315" fill="url(#sw-gradient-1)">
+                 <animateMotion
+                  dur="5s"
+                  repeatCount="indefinite">
+                  <mpath xlink:href="#motionpath" />
+                 </animateMotion>
+                 </use>
+                </g>
+              </svg> -->
+            
+
+<!-- <svg class="anim-wave" id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop><stop stop-color="rgba(255, 179, 11, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,147L60,122.5C120,98,240,49,360,24.5C480,0,600,0,720,24.5C840,49,960,98,1080,98C1200,98,1320,49,1440,89.8C1560,131,1680,261,1800,261.3C1920,261,2040,131,2160,81.7C2280,33,2400,65,2520,65.3C2640,65,2760,33,2880,32.7C3000,33,3120,65,3240,89.8C3360,114,3480,131,3600,171.5C3720,212,3840,278,3960,294C4080,310,4200,278,4320,245C4440,212,4560,180,4680,163.3C4800,147,4920,147,5040,122.5C5160,98,5280,49,5400,49C5520,49,5640,98,5760,163.3C5880,229,6000,310,6120,302.2C6240,294,6360,196,6480,138.8C6600,82,6720,65,6840,65.3C6960,65,7080,82,7200,130.7C7320,180,7440,261,7560,310.3C7680,359,7800,376,7920,359.3C8040,343,8160,294,8280,245C8400,196,8520,147,8580,122.5L8640,98L8640,490L8580,490C8520,490,8400,490,8280,490C8160,490,8040,490,7920,490C7800,490,7680,490,7560,490C7440,490,7320,490,7200,490C7080,490,6960,490,6840,490C6720,490,6600,490,6480,490C6360,490,6240,490,6120,490C6000,490,5880,490,5760,490C5640,490,5520,490,5400,490C5280,490,5160,490,5040,490C4920,490,4800,490,4680,490C4560,490,4440,490,4320,490C4200,490,4080,490,3960,490C3840,490,3720,490,3600,490C3480,490,3360,490,3240,490C3120,490,3000,490,2880,490C2760,490,2640,490,2520,490C2400,490,2280,490,2160,490C2040,490,1920,490,1800,490C1680,490,1560,490,1440,490C1320,490,1200,490,1080,490C960,490,840,490,720,490C600,490,480,490,360,490C240,490,120,490,60,490L0,490Z"></path><defs><linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop><stop stop-color="rgba(255, 179, 11, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)" d="M0,294L60,261.3C120,229,240,163,360,171.5C480,180,600,261,720,253.2C840,245,960,147,1080,130.7C1200,114,1320,180,1440,187.8C1560,196,1680,147,1800,155.2C1920,163,2040,229,2160,285.8C2280,343,2400,392,2520,367.5C2640,343,2760,245,2880,187.8C3000,131,3120,114,3240,114.3C3360,114,3480,131,3600,179.7C3720,229,3840,310,3960,326.7C4080,343,4200,294,4320,285.8C4440,278,4560,310,4680,326.7C4800,343,4920,343,5040,302.2C5160,261,5280,180,5400,147C5520,114,5640,131,5760,155.2C5880,180,6000,212,6120,196C6240,180,6360,114,6480,122.5C6600,131,6720,212,6840,212.3C6960,212,7080,131,7200,98C7320,65,7440,82,7560,98C7680,114,7800,131,7920,114.3C8040,98,8160,49,8280,32.7C8400,16,8520,33,8580,40.8L8640,49L8640,490L8580,490C8520,490,8400,490,8280,490C8160,490,8040,490,7920,490C7800,490,7680,490,7560,490C7440,490,7320,490,7200,490C7080,490,6960,490,6840,490C6720,490,6600,490,6480,490C6360,490,6240,490,6120,490C6000,490,5880,490,5760,490C5640,490,5520,490,5400,490C5280,490,5160,490,5040,490C4920,490,4800,490,4680,490C4560,490,4440,490,4320,490C4200,490,4080,490,3960,490C3840,490,3720,490,3600,490C3480,490,3360,490,3240,490C3120,490,3000,490,2880,490C2760,490,2640,490,2520,490C2400,490,2280,490,2160,490C2040,490,1920,490,1800,490C1680,490,1560,490,1440,490C1320,490,1200,490,1080,490C960,490,840,490,720,490C600,490,480,490,360,490C240,490,120,490,60,490L0,490Z"></path><defs><linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop><stop stop-color="rgba(255, 179, 11, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 100px); opacity:0.8" fill="url(#sw-gradient-2)" d="M0,98L60,114.3C120,131,240,163,360,204.2C480,245,600,294,720,310.3C840,327,960,310,1080,261.3C1200,212,1320,131,1440,138.8C1560,147,1680,245,1800,285.8C1920,327,2040,310,2160,253.2C2280,196,2400,98,2520,98C2640,98,2760,196,2880,220.5C3000,245,3120,196,3240,179.7C3360,163,3480,180,3600,163.3C3720,147,3840,98,3960,65.3C4080,33,4200,16,4320,57.2C4440,98,4560,196,4680,261.3C4800,327,4920,359,5040,334.8C5160,310,5280,229,5400,171.5C5520,114,5640,82,5760,57.2C5880,33,6000,16,6120,8.2C6240,0,6360,0,6480,65.3C6600,131,6720,261,6840,285.8C6960,310,7080,229,7200,236.8C7320,245,7440,343,7560,383.8C7680,425,7800,408,7920,383.8C8040,359,8160,327,8280,261.3C8400,196,8520,98,8580,49L8640,0L8640,490L8580,490C8520,490,8400,490,8280,490C8160,490,8040,490,7920,490C7800,490,7680,490,7560,490C7440,490,7320,490,7200,490C7080,490,6960,490,6840,490C6720,490,6600,490,6480,490C6360,490,6240,490,6120,490C6000,490,5880,490,5760,490C5640,490,5520,490,5400,490C5280,490,5160,490,5040,490C4920,490,4800,490,4680,490C4560,490,4440,490,4320,490C4200,490,4080,490,3960,490C3840,490,3720,490,3600,490C3480,490,3360,490,3240,490C3120,490,3000,490,2880,490C2760,490,2640,490,2520,490C2400,490,2280,490,2160,490C2040,490,1920,490,1800,490C1680,490,1560,490,1440,490C1320,490,1200,490,1080,490C960,490,840,490,720,490C600,490,480,490,360,490C240,490,120,490,60,490L0,490Z"></path><defs><linearGradient id="sw-gradient-3" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop><stop stop-color="rgba(255, 179, 11, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 150px); opacity:0.7" fill="url(#sw-gradient-3)" d="M0,49L60,73.5C120,98,240,147,360,155.2C480,163,600,131,720,122.5C840,114,960,131,1080,179.7C1200,229,1320,310,1440,310.3C1560,310,1680,229,1800,204.2C1920,180,2040,212,2160,245C2280,278,2400,310,2520,310.3C2640,310,2760,278,2880,285.8C3000,294,3120,343,3240,326.7C3360,310,3480,229,3600,228.7C3720,229,3840,310,3960,310.3C4080,310,4200,229,4320,228.7C4440,229,4560,310,4680,310.3C4800,310,4920,229,5040,171.5C5160,114,5280,82,5400,89.8C5520,98,5640,147,5760,147C5880,147,6000,98,6120,130.7C6240,163,6360,278,6480,294C6600,310,6720,229,6840,212.3C6960,196,7080,245,7200,277.7C7320,310,7440,327,7560,294C7680,261,7800,180,7920,171.5C8040,163,8160,229,8280,277.7C8400,327,8520,359,8580,375.7L8640,392L8640,490L8580,490C8520,490,8400,490,8280,490C8160,490,8040,490,7920,490C7800,490,7680,490,7560,490C7440,490,7320,490,7200,490C7080,490,6960,490,6840,490C6720,490,6600,490,6480,490C6360,490,6240,490,6120,490C6000,490,5880,490,5760,490C5640,490,5520,490,5400,490C5280,490,5160,490,5040,490C4920,490,4800,490,4680,490C4560,490,4440,490,4320,490C4200,490,4080,490,3960,490C3840,490,3720,490,3600,490C3480,490,3360,490,3240,490C3120,490,3000,490,2880,490C2760,490,2640,490,2520,490C2400,490,2280,490,2160,490C2040,490,1920,490,1800,490C1680,490,1560,490,1440,490C1320,490,1200,490,1080,490C960,490,840,490,720,490C600,490,480,490,360,490C240,490,120,490,60,490L0,490Z"></path></svg> -->
+        </div>
+    </div>
+</body>
+</html>
